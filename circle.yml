@@ -4,4 +4,6 @@ test:
     - cp -R tmp/coverage/* $CIRCLE_ARTIFACTS
     - mkdir -p $CIRCLE_TEST_REPORTS/python/
     - mv *.xml $CIRCLE_TEST_REPORTS/python/
-    - echo "dsafkdjsafldajsfladjf" > $CIRCLE_TEST_REPORTS/python/invalid.xml
+    - |
+      echo '<testsuite errors="1" failures="5" name="nose2-junit" skips="1" tests="25" time="0.004">
+      <testcase clas' > $CIRCLE_TEST_REPORTS/python/invalid.xml
